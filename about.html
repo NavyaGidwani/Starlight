@@ -1,93 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Starlight</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: white;
-            background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTM2NjcxMC1pbWFnZS1rd3Z4eGVxcC5qcGc.jpg') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-        }
-
-        header {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 15px 20px;
-            text-align: center;
-            backdrop-filter: blur(5px);
-            border-bottom: 2px solid #ff8ed2;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 10px;
-            border-bottom: 2px solid #ff8ed2;
-        }
-
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #ff8ed2;
-            color: black;
-        }
-
-        .about-section {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            text-align: center;
-            backdrop-filter: blur(5px);
-        }
-
-        h1, p {
-            color: white;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Starlight</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+      background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTM2NjcxMC1pbWFnZS1rd3Z4eGVxcC5qcGc.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+    
+    /* Header and Navigation */
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 20px;
+      text-align: center;
+      border-bottom: 2px solid #ff8ed2;
+    }
+    
+    header h1 {
+      margin: 0;
+      color: #ff8ed2;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-bottom: 2px solid #ff8ed2;
+    }
+    
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    nav a:hover {
+      background-color: #ff8ed2;
+      color: black;
+    }
+    
+    /* Common Title Styles */
+    h1, h2 {
+      color: #ff8ed2;
+    }
+    
+    /* About Section */
+    .about-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+    
+    .about-section p {
+      color: white;
+      font-size: 1.2em;
+      line-height: 1.5;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>About Starlight</h1>
-    </header>
+  <header>
+    <h1>About Starlight</h1>
+  </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="cart.html">Cart</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cart.html">Cart</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <section class="about-section">
-        <h1>Welcome to Starlight</h1>
-        <p>At Starlight, we believe in bringing a touch of elegance and stardom to your everyday shopping experience. Our curated collection features stylish and unique products designed to make you shine. Explore our store and find the perfect piece for your wardrobe!</p>
-    </section>
+  <section class="about-section">
+    <h2>Welcome to Starlight</h2>
+    <p>
+      At Starlight, we believe in bringing a touch of elegance and stardom to your everyday shopping experience.
+      Our curated collection features stylish and unique products designed to make you shine.
+      Explore our store and find the perfect piece for your wardrobe!
+    </p>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Starlight. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Starlight. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
