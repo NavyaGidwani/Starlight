@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Starlight by Navya Gidwani</title>
   <style>
-    /* General Styles */
+    /* Global Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -17,18 +17,23 @@
       min-height: 100vh;
     }
     
+    /* Header and Navigation */
     header {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 15px 20px;
       text-align: center;
-      backdrop-filter: blur(5px);
       border-bottom: 2px solid #ff8ed2;
+    }
+    
+    header h1 {
+      margin: 0;
+      color: #ff8ed2;
     }
     
     nav {
       display: flex;
       justify-content: center;
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 10px;
       border-bottom: 2px solid #ff8ed2;
     }
@@ -44,6 +49,11 @@
     nav a:hover {
       background-color: #ff8ed2;
       color: black;
+    }
+    
+    /* Common Title Styles */
+    h1, h2 {
+      color: #ff8ed2;
     }
     
     /* Hero Section */
@@ -63,21 +73,45 @@
       font-size: 1.2em;
     }
     
-    /* Featured Sections */
-    .featured,
-    .about-store {
+    /* Mini Game Section */
+    .mini-game {
+      padding: 40px 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      margin: 20px;
+      border-radius: 10px;
+    }
+    
+    .mini-game h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    
+    .mini-game p {
+      font-size: 1.2em;
+    }
+    
+    #star {
+      width: 50px;
+      height: 50px;
+      font-size: 2.5em;
+      line-height: 50px;
+      text-align: center;
+      position: absolute;
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    /* Featured Products Section */
+    .featured {
       padding: 40px 20px;
       text-align: center;
     }
     
-    .featured h2,
-    .about-store h2 {
-      font-size: 2.5em;
+    .featured h2 {
       margin-bottom: 20px;
-      color: #ff8ed2;
     }
     
-    /* Featured Products Grid */
     .featured-products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -109,7 +143,6 @@
     .product-card h3 {
       font-size: 1.5em;
       margin: 10px 0;
-      color: #ff8ed2;
     }
     
     .product-card p {
@@ -133,6 +166,11 @@
     }
     
     /* About Store Section */
+    .about-store {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
     .about-store p {
       font-size: 1.2em;
       max-width: 800px;
@@ -153,36 +191,6 @@
     .about-store a:hover {
       background-color: white;
       color: #ff8ed2;
-    }
-    
-    /* Mini Game Section */
-    .mini-game {
-      padding: 40px 20px;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.6);
-      margin: 20px;
-      border-radius: 10px;
-    }
-    
-    .mini-game h2 {
-      font-size: 2em;
-      margin-bottom: 10px;
-      color: #ff8ed2;
-    }
-    
-    .mini-game p {
-      font-size: 1.2em;
-    }
-    
-    #star {
-      width: 50px;
-      height: 50px;
-      font-size: 2.5em;
-      line-height: 50px;
-      text-align: center;
-      position: absolute;
-      cursor: pointer;
-      user-select: none;
     }
     
     /* Footer */
@@ -290,4 +298,3 @@
   </script>
 </body>
 </html>
-
