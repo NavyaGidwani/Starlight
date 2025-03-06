@@ -16,20 +16,23 @@
       background-size: cover;
       min-height: 100vh;
     }
-    
+
     /* Header and Navigation */
     header {
       background-color: rgba(0, 0, 0, 0.7);
       padding: 15px 20px;
       text-align: center;
       border-bottom: 2px solid #ff8ed2;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    
+
     header h1 {
       margin: 0;
       color: #ff8ed2;
     }
-    
+
     nav {
       display: flex;
       justify-content: center;
@@ -37,7 +40,7 @@
       padding: 10px;
       border-bottom: 2px solid #ff8ed2;
     }
-    
+
     nav a {
       color: white;
       padding: 14px 20px;
@@ -45,34 +48,42 @@
       font-weight: bold;
       transition: background-color 0.3s;
     }
-    
+
     nav a:hover {
       background-color: #ff8ed2;
       color: black;
     }
-    
+
     /* Common Title Styles */
     h1, h2 {
       color: #ff8ed2;
     }
-    
+
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 50px 20px;
+      padding: 100px 20px;
       color: white;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     }
-    
+
     .hero h1 {
       font-size: 3em;
       margin: 0;
+      animation: fadeIn 2s ease-in-out;
     }
-    
+
     .hero p {
       font-size: 1.2em;
+      animation: fadeIn 3s ease-in-out;
     }
-    
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     /* Mini Game Section */
     .mini-game {
       padding: 40px 20px;
@@ -81,16 +92,16 @@
       margin: 20px;
       border-radius: 10px;
     }
-    
+
     .mini-game h2 {
       font-size: 2em;
       margin-bottom: 10px;
     }
-    
+
     .mini-game p {
       font-size: 1.2em;
     }
-    
+
     #star {
       width: 50px;
       height: 50px;
@@ -100,18 +111,23 @@
       position: absolute;
       cursor: pointer;
       user-select: none;
+      transition: transform 0.2s ease-in-out;
     }
-    
+
+    #star:hover {
+      transform: scale(1.1);
+    }
+
     /* Featured Products Section */
     .featured {
       padding: 40px 20px;
       text-align: center;
     }
-    
+
     .featured h2 {
       margin-bottom: 20px;
     }
-    
+
     .featured-products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -119,7 +135,7 @@
       max-width: 1200px;
       margin: auto;
     }
-    
+
     .product-card {
       background: rgba(255, 255, 255, 0.8);
       border: 2px solid #ff8ed2;
@@ -129,26 +145,26 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    
+
     .product-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     }
-    
+
     .product-card img {
       max-width: 100%;
       border-radius: 8px;
     }
-    
+
     .product-card h3 {
       font-size: 1.5em;
       margin: 10px 0;
     }
-    
+
     .product-card p {
       color: #555;
     }
-    
+
     .product-card a {
       display: inline-block;
       margin-top: 10px;
@@ -159,24 +175,24 @@
       border-radius: 5px;
       transition: background-color 0.3s;
     }
-    
+
     .product-card a:hover {
       background-color: white;
       color: #ff8ed2;
     }
-    
+
     /* About Store Section */
     .about-store {
       padding: 40px 20px;
       text-align: center;
     }
-    
+
     .about-store p {
       font-size: 1.2em;
       max-width: 800px;
       margin: auto;
     }
-    
+
     .about-store a {
       display: inline-block;
       margin-top: 20px;
@@ -187,18 +203,39 @@
       border-radius: 5px;
       transition: background-color 0.3s;
     }
-    
+
     .about-store a:hover {
       background-color: white;
       color: #ff8ed2;
     }
-    
+
     /* Footer */
     footer {
       text-align: center;
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.7);
       color: white;
+    }
+
+    /* Scroll-to-Top Button */
+    #scrollToTop {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff8ed2;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2em;
+      transition: background-color 0.3s;
+    }
+
+    #scrollToTop:hover {
+      background-color: white;
+      color: #ff8ed2;
     }
   </style>
 </head>
@@ -220,14 +257,14 @@
     <h1>Where Shopping Meets Stardom ✨</h1>
     <p>Shine bright, shop right!</p>
   </section>
-  
+
   <!-- Mini Game Section -->
   <section class="mini-game">
     <h2>Mini Game: Click the Star!</h2>
     <p>Score: <span id="score">0</span></p>
     <div id="star">⭐</div>
   </section>
-  
+
   <!-- Featured Products Section -->
   <section class="featured">
     <h2>Featured Products</h2>
@@ -252,7 +289,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- About Store Section -->
   <section class="about-store">
     <h2>About Our Store</h2>
@@ -266,22 +303,24 @@
     <p>&copy; 2025 Starlight. All rights reserved.</p>
   </footer>
 
+  <!-- Scroll-to-Top Button -->
+  <button id="scrollToTop" title="Go to top">↑</button>
+
   <script>
     // Mini Game: Click the Star
     let score = 0;
     const star = document.getElementById('star');
     const scoreEl = document.getElementById('score');
 
-    // Function to move the star to a random position within the viewport
+    // Function to move the star to a random position
     function moveStar() {
       const viewportWidth = window.innerWidth;
       const viewportHeight = window.innerHeight;
-      const starSize = 50; // width and height of the star element
-      
-      // Calculate random positions
+      const starSize = 50;
+
       const x = Math.random() * (viewportWidth - starSize);
-      const y = Math.random() * (viewportHeight - starSize - 100); // subtract some offset for header
-      
+      const y = Math.random() * (viewportHeight - starSize - 100);
+
       star.style.left = x + 'px';
       star.style.top = y + 'px';
     }
@@ -293,8 +332,30 @@
       moveStar();
     });
 
-    // Initialize the star position
+    // Initialize the game
     moveStar();
+
+    // Scroll-to-Top Button
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = 'block';
+      } else {
+        scrollToTopBtn.style.display = 'none';
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
+    });
   </script>
 </body>
 </html>
